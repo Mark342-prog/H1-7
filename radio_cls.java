@@ -1,5 +1,16 @@
+/**
+ * radio_cls
+ * Objetivo: Modulos del radio
+ * 
+ * @author Lourdes Saavedra
+ * @author Paulo Sánchez
+ * @author Andres Chivalan
+ * @version 1.0 finalizado 20/01/2022
+ */
 import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.Test;
 /**
  * radio_cls
  */
