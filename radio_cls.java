@@ -90,8 +90,11 @@ Integer pos;
 
     @Override
     public boolean getFrequency() {
-        // TODO Auto-generated method stub
-        return false;
+        if (frequency == false) {
+           return frequency;
+        } else {
+            return frequency;
+        }
     }
 
     @Override
