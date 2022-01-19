@@ -31,12 +31,12 @@ Integer pos;
     public void nextStation(boolean frequency) {
         if (frequency == false) {
             st_fm =+ 0.2;
-            if (st_am == 107.9) {
+            if (st_am > 107.9) {
                 st_fm = 87.9;
             }
         } else {
             st_fm =+ 10;
-            if (st_am == 1610) {
+            if (st_am > 1610) {
                 st_fm = 530;
             }
         }
@@ -47,12 +47,12 @@ Integer pos;
     public void prevStation(boolean frequency) {
         if (frequency == false) {
             st_fm =- 0.2;
-            if (st_am == 87.9) {
+            if (st_am < 87.9) {
                 st_fm = 107.9;
             }
         } else {
             st_fm =- 10;
-            if (st_am == 530) {
+            if (st_am < 530) {
                 st_fm = 1610;
             }
         }
