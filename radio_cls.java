@@ -90,18 +90,16 @@ Integer pos;
 
     @Override
     public boolean getFrequency() {
-        if (frequency == false) {
-           return frequency;
-        } else {
-            return frequency;
-        }
+        return frequency;
     }
 
     @Override
     public void switchAMFM() {
-        // TODO Auto-generated method stub
-        
-    }
+        if (frequency == false) {
+           frequency = true;
+         } else {
+            frequency = false;
+         }
+     }
 
-    
 }
