@@ -14,7 +14,7 @@ public class radio_main{
          * Generacion de scanner y de objeto
          */
         Scanner sc = new Scanner(System.in);
-        radio_main Radio=new radio_main();
+        radio_cls Radio=new radio_cls();
         
             /**
             * Variable para opciones de menu
@@ -42,7 +42,8 @@ public class radio_main{
         switch (op)
         {
             case 1:
-
+            Radio.isOn();
+            System.out.println("Acaba de encender el radio");
             break;
             case 2:
 
@@ -57,10 +58,11 @@ public class radio_main{
 
             break;
             case 6:
-
+            Radio.turnOnOff();
+            System.out.println("Se ha apagado el radio");
             break;
             case 7:
-
+            System.out.println("Gracias por utilizarnos el Radio Algoritmos");
             break;
 
         }
