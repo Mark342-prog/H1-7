@@ -14,19 +14,12 @@ public class radio_main{
          * Generacion de scanner y de objeto
          */
         Scanner sc = new Scanner(System.in);
-        Scanner sc1= new Scanner(System.in);
-        radio_cls Radio=new radio_cls();
+        radio_cls Rdcl=new radio_cls();
         
-        Scanner scanner = new Scanner(System.in);
             /**
             * Variable para opciones de menu
             */
         int op=0;
-        boolean on = false;
-        boolean frequency = false; //falso es fm y am es true
-        Integer st_am = 530; 
-        double st_fm = 87.9;
-        Integer pos;
             /**
              * Ciclo while para ejectutar las opciones
             */
@@ -50,11 +43,11 @@ public class radio_main{
         switch (op)
         {
             case 1:
-            Radio.isOn();
+            Rdcl.isOn();
             System.out.println("Acaba de encender el radio");
             break;
             case 2:
-            Radio.switchAMFM();
+            Rdcl.switchAMFM();
             System.out.println("Ha cambiado de AM a FM");
             break;
             case 3:
@@ -62,33 +55,37 @@ public class radio_main{
             System.out.println("2. Avanzar la emisora");
             System.out.println("3. Regresar a la emisora");
             int op1=0;
-            op1=sc1.nextInt();
+            op1=sc.nextInt();
                 if(op1==1)
                 {
-                    Radio.getStation();
+                    Rdcl.getStation();
                 }
                 else if(op1==2)
                 {
-                    Radio.nextStation(frequency);
+                    Rdcl.nextStation(Rdcl.frequency);
                 }
                 else if (op1==3)
                 {
-                    Radio.prevStation(frequency);
+                    Rdcl.prevStation(Rdcl.frequency);
                 }
 
             break;
             case 4:
-            Radio.saveStation(0, st_fm);
+            double st = Rdcl.getStation();
+            System.out.println("Seleccione el botón (1 -12) en donde aguardara la emisora");
+            Integer pj = sc.nextInt();
+            Integer pjr = pj - 1;
+            Rdcl.saveStation(pjr, st);
             break;
             case 5:
             //Seleccionar de AM a FM
             System.out.println("Seleccione el botón (1 -12) de la emisora guardada");
-            int respuesta = scanner.nextInt();
+            int respuesta = sc.nextInt();
             int boton = respuesta -1;
-            Radio.getSavedStation(boton);
+            Rdcl.getSavedStation(boton);
             break;
             case 6:
-            Radio.turnOnOff();
+            Rdcl.turnOnOff();
             System.out.println("Se ha apagado el radio");
             break;
             case 7:
