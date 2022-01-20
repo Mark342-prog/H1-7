@@ -73,10 +73,10 @@ Integer pos;
     @Override
     public double getStation() {
         if (frequency = false) {
-            System.out.println("Usted esta escuchando actualmente: FM" + st_fm);
+            System.out.println("Usted esta escuchando actualmente: FM " + st_fm);
             return st_fm;
         } else {
-            System.out.println("Usted esta escuchando actualmente: AM" + st_am);
+            System.out.println("Usted esta escuchando actualmente: AM " + st_am);
             return st_am;
         }
     }
@@ -85,18 +85,25 @@ Integer pos;
     public void saveStation(int position, double station) {
      if (frequency = false) {
          fm.add(st_fm);
-         System.out.println("Se ha agregado la estación" + st_fm + "a su lista en FM");
+         System.out.println("Se ha agregado la estación " + st_fm + " a su lista en FM");
      } else {
         am.add(st_am);
-        System.out.println("Se ha agregado la estación" + st_am + "a su lista en AM");
+        System.out.println("Se ha agregado la estación " + st_am + " a su lista en AM");
      }
         
     }
 
     @Override
     public double getSavedStation(int position) {
-        
-        return 0;
+     if(frequency = false){
+         fm.get(position);
+         System.out.println("La estación guardada en el botón "+ position + " es "+ fm.get(position));
+         return fm.get(position);
+     }else{
+        am.get(position);
+        System.out.println("La estación guardada en el botón "+ position + " es " + am.get(position));
+        return am.get(position);
+     }   
     }
 
     @Override
