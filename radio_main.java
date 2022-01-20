@@ -17,6 +17,7 @@ public class radio_main{
         Scanner sc1= new Scanner(System.in);
         radio_cls Radio=new radio_cls();
         
+        Scanner scanner = new Scanner(System.in);
             /**
             * Variable para opciones de menu
             */
@@ -77,10 +78,14 @@ public class radio_main{
 
             break;
             case 4:
-            
+            Radio.saveStation(0, st_fm);
             break;
             case 5:
             //Seleccionar de AM a FM
+            System.out.println("Seleccione el botón (1 -12) de la emisora guardada");
+            int respuesta = scanner.nextInt();
+            int boton = respuesta -1;
+            Radio.getSavedStation(boton);
             break;
             case 6:
             Radio.turnOnOff();
