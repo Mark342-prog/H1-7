@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\raule\\Desktop\\Tercer Semestre 2022\\Algoritmos y estructuras de datos\\Ejercicio18-01\\ejercicio\\lib\\junit-platform-console-standalone-1.7.0-all.jar"
+        "c:\\Users\\raule\\Desktop\\Tercer Semestre 2022\\Algoritmos y estructuras de datos\\Ejercicio18-01\\ejercicio\\lib\\junit-platform-console-standalone-1.7.0-all.jar",
+        "Radio/lib/junit-platform-console-standalone-1.7.0-all.jar"
     ]
 }
