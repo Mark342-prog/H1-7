@@ -7,6 +7,7 @@
  * @author Andres Chivalan
  * @version 1.0 finalizado 20/01/2022
  */
+import java.beans.Transient;
 import java.util.ArrayList;
 /**import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -49,8 +50,7 @@ Integer pos;
             if (st_am > 1610) {
                 st_fm = 530;
             }
-        }
-        
+        }    
     }
 
     @Override
@@ -71,7 +71,7 @@ Integer pos;
 
     @Override
     public double getStation() {
-        if (frequency = false) {
+        if (frequency == false) {
             System.out.println("Usted esta escuchando actualmente: FM " + st_fm);
             return st_fm;
         } else {
@@ -83,7 +83,7 @@ Integer pos;
     @Override
     public void saveStation(int position, double station) {
         try{
-     if (frequency = false) {
+     if (frequency == false) {
          fm.set(position, station);
          System.out.println("Se ha agregado la estación " + station + " a su lista en FM  en el puesto" + position);
         }
@@ -103,7 +103,7 @@ Integer pos;
     public double getSavedStation(int position) {
         try {
             
-     if(frequency = false){
+     if(frequency == false){
          fm.get(position);
          System.out.println("La estación guardada en el botón "+ position + " es "+ fm.get(position));
          return fm.get(position);
@@ -131,5 +131,4 @@ Integer pos;
             frequency = false;
          }
      }
-
 }
